@@ -321,11 +321,16 @@ os.makedirs(".", exist_ok=True)
 stats = "".join(f"<div><dt>{l}</dt><dd>{v}</dd></div>" for l, v in STATS)
 home = f'''
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-media"><div class="container"><img class="hero-photo" src="{HERO}" alt="" fetchpriority="high"></div></div>
-  <div class="container hero-search"><div class="hero-box">
-    <h1 id="hero-title">Connecting great people with fantastic job opportunities to build a stronger, more professional industry.</h1>
-    <p class="hero-sub">Holiday park, caravan park and resort jobs across Australia.</p>
-    {search_panel()}</div></div>
+  <div class="hero-media"><div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="hero-kicker"><span class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Australia's holiday park job board</p>
+      <h1 id="hero-title">Connecting great people with <span class="hl">fantastic job opportunities</span></h1>
+      <p class="hero-sub">Helping build a stronger, more professional holiday park industry, from your first season to your next management role.</p>
+      <div class="btn-row"><a class="btn btn-primary btn-lg" href="jobs.html">Find a Job</a><a class="btn btn-accent btn-lg" href="post-job.html">Post a Job</a></div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><img class="hero-photo" src="{HERO}" alt="" fetchpriority="high"></div>
+  </div></div>
+  <div class="container hero-search">{search_panel()}</div>
 </section>
 
 <section class="stats" aria-label="Our community"><div class="container"><div class="stats-inner">

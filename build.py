@@ -225,7 +225,7 @@ def search_panel(form_attr="data-job-search", with_ids="h"):
     <label class="field-wrap"><span class="sr-only">Keywords</span>{ico("search")}<input class="field" name="keywords" placeholder="Job title or keyword"></label>
     <label class="field-wrap"><span class="sr-only">Location</span>{ico("map-pin")}<input class="field" name="location" list="{with_ids}-locations" placeholder="Town, region or state"><datalist id="{with_ids}-locations">{states}</datalist></label>
     <label class="field-wrap"><span class="sr-only">Job category</span>{ico("layout-grid")}<select class="field" name="category"><option value="">All categories</option>{cats}</select>{ico("chevron-down", "chev")}</label>
-    <button class="btn btn-accent btn-lg" type="submit">{ico("search")} Find Jobs</button>
+    <button class="btn btn-primary btn-lg" type="submit">{ico("search")} Find Jobs</button>
   </div>
 </form>'''
 
@@ -321,15 +321,11 @@ os.makedirs(".", exist_ok=True)
 stats = "".join(f"<div><dt>{l}</dt><dd>{v}</dd></div>" for l, v in STATS)
 home = f'''
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero-media"><img src="{HERO}" alt="" fetchpriority="high">
-    <div class="container"><div class="hero-copy">
-      <p class="hero-kicker">Australia's holiday park job board</p>
-      <h1 id="hero-title">Connecting great people with fantastic holiday parks</h1>
-      <p class="hero-sub">Discover career opportunities and connect with employers across Australia's holiday park industry.</p>
-      <div class="btn-row"><a class="btn btn-inverse btn-lg" href="jobs.html">Find a Job</a><a class="btn btn-outline-inverse btn-lg" href="post-job.html">Post a Job</a></div>
-    </div></div>
-  </div>
-  <div class="container hero-search">{search_panel()}</div>
+  <div class="hero-media"><div class="container"><img class="hero-photo" src="{HERO}" alt="" fetchpriority="high"></div></div>
+  <div class="container hero-search"><div class="hero-box">
+    <h1 id="hero-title">Connecting great people with fantastic job opportunities to build a stronger, more professional industry.</h1>
+    <p class="hero-sub">Holiday park, caravan park and resort jobs across Australia.</p>
+    {search_panel()}</div></div>
 </section>
 
 <section class="stats" aria-label="Our community"><div class="container"><div class="stats-inner">

@@ -140,10 +140,10 @@ def header(active):
     <div class="header-actions">
       <a class="login" href="login.html">Login</a>
       <a class="btn btn-secondary btn-sm" href="register.html">Register</a>
-      <a class="btn btn-primary btn-sm" href="post-job.html">Post a Job</a>
+      <a class="btn btn-accent btn-sm" href="post-job.html">Post a Job</a>
     </div>
     <div class="header-mobile">
-      <a class="btn btn-primary btn-sm" href="post-job.html">Post a Job</a>
+      <a class="btn btn-accent btn-sm" href="post-job.html">Post a Job</a>
       <button class="icon-btn" type="button" data-drawer-open aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">{ico("menu")}</button>
     </div>
   </div>
@@ -154,7 +154,7 @@ def header(active):
     <div class="drawer-head"><img src="{LOGO}" alt="Hire Me Holiday Parks"><button class="icon-btn" type="button" data-drawer-close aria-label="Close menu">{ico("x")}</button></div>
     <nav aria-label="Mobile"><ul>{links}</ul></nav>
     <div class="drawer-foot">
-      <a class="btn btn-primary btn-lg btn-block" href="post-job.html">Post a Job</a>
+      <a class="btn btn-accent btn-lg btn-block" href="post-job.html">Post a Job</a>
       <div class="pair"><a class="btn btn-secondary" href="login.html">Login</a><a class="btn btn-secondary" href="register.html">Register</a></div>
     </div>
   </div>
@@ -225,7 +225,7 @@ def search_panel(form_attr="data-job-search", with_ids="h"):
     <label class="field-wrap"><span class="sr-only">Keywords</span>{ico("search")}<input class="field" name="keywords" placeholder="Job title or keyword"></label>
     <label class="field-wrap"><span class="sr-only">Location</span>{ico("map-pin")}<input class="field" name="location" list="{with_ids}-locations" placeholder="Town, region or state"><datalist id="{with_ids}-locations">{states}</datalist></label>
     <label class="field-wrap"><span class="sr-only">Job category</span>{ico("layout-grid")}<select class="field" name="category"><option value="">All categories</option>{cats}</select>{ico("chevron-down", "chev")}</label>
-    <button class="btn btn-primary btn-lg" type="submit">{ico("search")} Find Jobs</button>
+    <button class="btn btn-accent btn-lg" type="submit">{ico("search")} Find Jobs</button>
   </div>
 </form>'''
 
